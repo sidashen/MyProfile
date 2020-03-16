@@ -5,23 +5,37 @@ import './App.css';
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = { value: 'Your name' };
+    this.state = {
+      nameValue: 'Your name',
+      genderValue: 'Male',
+      descriptionValue: 'Description about yourself'
+    };
   }
 
   handleChange = (event) => {
-    this.setState({ value: event.target.value });
+    const target = event.target;
+    const name = target.name;
+    this.setState({ [name]: target.value })
   }
 
-  handleFocus = () => {
-    this.setState({ value: '' });
-  }
+  handleFocus = () => this.setState({ nameValue: '' });
 
   render() {
     return (
-      <label>
-        Name
-        <input type="text" value={this.state.value} onChange={() => this.handleChange()} onFocus={this.handleFocus} />
-      </label>
+      <div>
+        <label>
+          Name
+          <input type="text" value={this.state.nameValue} onChange={(event) => this.handleChange(event)}
+            onFocus={() => this.handleFocus()} name='nameValue' />
+        </label>
+        <label>
+          Gender
+          <select value={this.state.genderValue} onChange={(event) => this.handleChange(event)} name='genderValue'>
+            <option value='Male'>Male</option>
+            <option value='Female'>Female</option>
+          </select>
+        </label>
+      </div>
     );
   }
 }
