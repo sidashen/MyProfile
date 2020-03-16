@@ -7,10 +7,10 @@
 .my-profile {
   position: relative;
   left: 50%;
-  margin-left: -250px;
+  margin-left: -225px;
   margin-top: 200px;
-  padding: 30px 50px;
-  width: 500px;
+  padding: 30px 60px;
+  width: 450px;
   height: 500px;
   background-color: #c5c5c5;
   color: #4b4d4f;
@@ -20,3 +20,16 @@
   padding: 20px 0;
 }
 
+.input {
+  margin: 10px 0;
+}
+
+.input-title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.name-input {
+  width: 330px;
+  height: 50px;
+}

@@ -40,13 +40,14 @@ class App extends Component {
         <h1 className="form-title">My Profile</h1>
         <form onSubmit={(event) => this.handleSubmit(event)} className="my-profile-form">
           <label>
-            Name
-          <input
+            <div className="input-title input"> Name</div>
+            <input
               type="text"
               value={this.state.nameValue}
               onChange={(event) => this.handleChange(event)}
               onFocus={(event) => this.handleFocus(event)}
-              name="nameValue" />
+              name="nameValue"
+              className="name-input input" />
           </label>
           <label>
             Gender
