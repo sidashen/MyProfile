@@ -69,15 +69,15 @@ class App extends Component {
               name="descriptionValue"
               className="description-input input" />
           </label>
-          <label>
+          <label className="check-terms">
             <input
               name="isAgree"
               type="checkbox"
               checked={this.state.isAgree}
               onChange={(event) => this.handleChange(event)} />
-            I have read the terms of conduct
-        </label>
-          <input type="submit" value="Submit" />
+            <span className="terms">I have read the terms of conduct</span>
+          </label>
+          <input type="submit" value="Submit" className="submit-button" />
         </form>
       </div>
     );

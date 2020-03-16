@@ -11,7 +11,7 @@
   margin-top: 60px;
   padding: 30px 60px;
   width: 450px;
-  height: 700px;
+  height: 740px;
   background-color: #c5c5c5;
   color: #4b4d4f;
 }
@@ -41,4 +41,24 @@
 
 .gender-input {
   text-indent: 10px;
+}
+
+.check-terms {
+  display: block;
+  margin: 10px 0;
+}
+
+.terms {
+  padding-left: 10px;
+}
+
+.submit-button {
+  position: relative;
+  top: 35px;
+  left: 21.2%;
+  width: 200px;
+  height: 60px;
+  background-color: #00a7e6;
+  color: white;
+  font-size: 18px;
 }
