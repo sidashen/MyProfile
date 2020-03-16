@@ -40,7 +40,7 @@ class App extends Component {
         <h1 className="form-title">My Profile</h1>
         <form onSubmit={(event) => this.handleSubmit(event)} className="my-profile-form">
           <label>
-            <div className="input-title input"> Name</div>
+            <div className="input-title">Name</div>
             <input
               type="text"
               value={this.state.nameValue}
@@ -50,11 +50,12 @@ class App extends Component {
               className="name-input input" />
           </label>
           <label>
-            Gender
-          <select
+            <div className="input-title">Gender</div>
+            <select
               value={this.state.genderValue}
               onChange={(event) => this.handleChange(event)}
-              name="genderValue">
+              name="genderValue"
+              className="gender-input input">
               <option value="Male">Male</option>
               <option value="Female">Female</option>
             </select>
