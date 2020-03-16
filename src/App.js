@@ -55,7 +55,7 @@ class App extends Component {
               value={this.state.genderValue}
               onChange={(event) => this.handleChange(event)}
               name="genderValue"
-              className="input">
+              className="gender-input input">
               <option value="Male">Male</option>
               <option value="Female">Female</option>
             </select>

@@ -36,4 +36,9 @@
 
 .description-input {
   height: 150px;
+  padding-left: 17px;
+}
+
+.gender-input {
+  text-indent: 10px;
 }
