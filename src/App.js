@@ -47,7 +47,7 @@ class App extends Component {
               onChange={(event) => this.handleChange(event)}
               onFocus={(event) => this.handleFocus(event)}
               name="nameValue"
-              className="name-input input" />
+              className="input" />
           </label>
           <label>
             <div className="input-title">Gender</div>
@@ -55,17 +55,19 @@ class App extends Component {
               value={this.state.genderValue}
               onChange={(event) => this.handleChange(event)}
               name="genderValue"
-              className="gender-input input">
+              className="input">
               <option value="Male">Male</option>
               <option value="Female">Female</option>
             </select>
           </label>
           <label>
-            Description
-          <textarea
+            <div className="input-title">Description</div>
+            <textarea
               value={this.state.descriptionValue}
               onChange={this.handleChange}
-              onFocus={(event) => this.handleFocus(event)} name="descriptionValue" />
+              onFocus={(event) => this.handleFocus(event)}
+              name="descriptionValue"
+              className="description-input input" />
           </label>
           <label>
             <input

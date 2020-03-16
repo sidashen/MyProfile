@@ -22,12 +22,18 @@
 
 .input {
   margin: 10px 0;
+  padding: 20px 15px;
   width: 330px;
   height: 50px;
+  font-size: 14px;
 }
 
 .input-title {
   font-size: 20px;
   font-weight: bold;
   margin: 10px 0;
+}
+
+.description-input {
+  height: 150px;
 }
