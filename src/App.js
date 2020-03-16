@@ -36,7 +36,8 @@ class App extends Component {
 
   render() {
     return (
-      <form onSubmit={(event) => this.handleSubmit(event)}>
+      <form onSubmit={(event) => this.handleSubmit(event)} className="my-profile-form">
+        <h1>My Profile</h1>
         <label>
           Name
           <input
