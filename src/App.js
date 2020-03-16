@@ -36,44 +36,46 @@ class App extends Component {
 
   render() {
     return (
-      <form onSubmit={(event) => this.handleSubmit(event)} className="my-profile-form">
+      <div className="my-profile">
         <h1>My Profile</h1>
-        <label>
-          Name
+        <form onSubmit={(event) => this.handleSubmit(event)} className="my-profile-form">
+          <label>
+            Name
           <input
-            type="text"
-            value={this.state.nameValue}
-            onChange={(event) => this.handleChange(event)}
-            onFocus={(event) => this.handleFocus(event)}
-            name="nameValue" />
-        </label>
-        <label>
-          Gender
+              type="text"
+              value={this.state.nameValue}
+              onChange={(event) => this.handleChange(event)}
+              onFocus={(event) => this.handleFocus(event)}
+              name="nameValue" />
+          </label>
+          <label>
+            Gender
           <select
-            value={this.state.genderValue}
-            onChange={(event) => this.handleChange(event)}
-            name="genderValue">
-            <option value="Male">Male</option>
-            <option value="Female">Female</option>
-          </select>
-        </label>
-        <label>
-          Description
+              value={this.state.genderValue}
+              onChange={(event) => this.handleChange(event)}
+              name="genderValue">
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+            </select>
+          </label>
+          <label>
+            Description
           <textarea
-            value={this.state.descriptionValue}
-            onChange={this.handleChange}
-            onFocus={(event) => this.handleFocus(event)} name="descriptionValue" />
+              value={this.state.descriptionValue}
+              onChange={this.handleChange}
+              onFocus={(event) => this.handleFocus(event)} name="descriptionValue" />
+          </label>
+          <label>
+            <input
+              name="isAgree"
+              type="checkbox"
+              checked={this.state.isAgree}
+              onChange={(event) => this.handleChange(event)} />
+            I have read the terms of conduct
         </label>
-        <label>
-          <input
-            name="isAgree"
-            type="checkbox"
-            checked={this.state.isAgree}
-            onChange={(event) => this.handleChange(event)} />
-          I have read the terms of conduct
-        </label>
-        <input type="submit" value="Submit" />
-      </form>
+          <input type="submit" value="Submit" />
+        </form>
+      </div>
     );
   }
 }
