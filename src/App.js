@@ -18,7 +18,11 @@ class App extends Component {
     this.setState({ [name]: target.value })
   }
 
-  handleFocus = () => this.setState({ nameValue: '' });
+  handleFocus = (event) => {
+    const target = event.target;
+    const name = target.name;
+    this.setState({ [name]: '' });
+  }
 
   render() {
     return (
@@ -26,7 +30,7 @@ class App extends Component {
         <label>
           Name
           <input type="text" value={this.state.nameValue} onChange={(event) => this.handleChange(event)}
-            onFocus={() => this.handleFocus()} name='nameValue' />
+            onFocus={(event) => this.handleFocus(event)} name='nameValue' />
         </label>
         <label>
           Gender
@@ -34,6 +38,11 @@ class App extends Component {
             <option value='Male'>Male</option>
             <option value='Female'>Female</option>
           </select>
+        </label>
+        <label>
+          Description
+          <textarea value={this.state.descriptionValue} onChange={this.handleChange}
+            onFocus={(event) => this.handleFocus(event)} name='descriptionValue' />
         </label>
       </div>
     );
