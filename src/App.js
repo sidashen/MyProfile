@@ -37,7 +37,7 @@ class App extends Component {
   render() {
     return (
       <div className="my-profile">
-        <h1>My Profile</h1>
+        <h1 className="form-title">My Profile</h1>
         <form onSubmit={(event) => this.handleSubmit(event)} className="my-profile-form">
           <label>
             Name

@@ -13,4 +13,10 @@
   width: 500px;
   height: 500px;
   background-color: #c5c5c5;
+  color: #4b4d4f;
 }
+
+.form-title {
+  padding: 20px 0;
+}
+
